@@ -1,0 +1,11 @@
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0.5rem 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.navbar a {
+    padding: .5rem;
+}
