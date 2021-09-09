@@ -1,11 +1,11 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAKVp4YJRiF_7sL8bDtSCuxULiVwdAVz5g",
   authDomain: "obrador-celiaco.firebaseapp.com",
   projectId: "obrador-celiaco",
   storageBucket: "obrador-celiaco.appspot.com",
   messagingSenderId: "697811198290",
+  apiKey: "AIzaSyAKVp4YJRiF_7sL8bDtSCuxULiVwdAVz5g",
   appId: "1:697811198290:web:b2e93095ffb88d7fe29a8b"
 };
 

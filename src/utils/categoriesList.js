@@ -28,3 +28,10 @@ export const CATEGORIES = [
         filter : 'temporada'
     }
 ]
+
+export const CATEGORIES_FILTER = {
+    PANADERIA : ['panadería', 'panaderia'],
+    BOLLERIA : ['bolleria', 'bollería'],
+    PASTELERIA : ['pasteleria', 'pastelería'],
+    TEMPORADA : ['productos de temporada']
+}

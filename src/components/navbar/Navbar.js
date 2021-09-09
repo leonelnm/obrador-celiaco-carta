@@ -3,8 +3,13 @@ import { Link } from "wouter";
 import { CATEGORIES } from "utils/categoriesList";
 
 import style from "components/navbar/Navbar.module.css";
+import { useProducts } from "hooks/useProducts";
 
 export const Navbar = () => {
+
+  // load products on context
+  useProducts()
+
   return (
     <nav className={style.navbar}>
       {CATEGORIES.map((c) => {
