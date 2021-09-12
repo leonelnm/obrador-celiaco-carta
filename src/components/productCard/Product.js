@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function Product ({imgUrl, name, price, content, categories}) {
-    console.log(categories);
+function Product ({id, imgUrl, name, price, content, categories}) {
     return (
         <article>
-            <img src={imgUrl} alt={name} height={100}/>
+            <img src={imgUrl} alt={name} height={100} loading='lazy'/>
             <p>{name}</p>
             {price && <p>{price.replace('.', ',')}€</p>}
             <p>{content[0]}</p>
@@ -13,3 +12,6 @@ export default function Product ({imgUrl, name, price, content, categories}) {
     )
 }
 
+export default React.memo(Product, (prevProps, nextProps) => {
+    return prevProps.id === nextProps.id
+})

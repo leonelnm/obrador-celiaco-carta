@@ -1,13 +1,13 @@
 import React from "react";
-import { CATEGORIES } from "utils/categoriesList";
+import { CATEGORIES, CATEGORIES_INFO } from "utils/categoriesList";
 import { CATEGORY_COMPONENT } from "utils/componentList";
 import { Route } from "wouter";
 
 export const Router = () => {
   return (
     <>
-      {CATEGORIES.map((c) => {
-        const { path: url, component } = c;
+      {CATEGORIES.map((name) => {
+        const { path: url, component } = CATEGORIES_INFO[name];
         return (
           <Route
             key={`route-${component}`}

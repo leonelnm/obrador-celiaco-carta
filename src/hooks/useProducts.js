@@ -8,10 +8,12 @@ export const useProducts = () => {
 
   useEffect(() => {
     fetchProducts().then((response) => {
+
+      console.log(JSON.stringify(response));
+
       getProductsFiltered(response).then(allProducts => {
         setProducts(allProducts)
         setLoading(false)
-        console.log(allProducts);
       })
     });
   }, [setProducts, setLoading]);

@@ -1,28 +1,18 @@
-import Loading from 'components/loader/Loading';
-import Product from 'components/productCard/Product';
-import { useGlobalProduct } from 'hooks/useGlobalProduct';
-import React from 'react'
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useGlobalProduct } from "hooks/useGlobalProduct";
+import { ProductList } from "components/productList/ProductList";
+import { CATEGORIES_INFO } from "utils/categoriesList";
 
-export const Pasteleria = ({filter}) => {
-    const { pasteleria, loading } = useGlobalProduct();
-
+export const Pasteleria = () => {
+  const { title } = CATEGORIES_INFO.pasteleria;
+  const { pasteleria, loading } = useGlobalProduct();
   return (
-    <section>
-      {loading ? (
-        <Loading />
-      ) : (
-        pasteleria.map((p) => {
-          return (
-            <Product
-              key={p.id}
-              imgUrl={p.url}
-              name={p.name}
-              price={p.price}
-              content={p.content}
-            />
-          );
-        })
-      )}
-    </section>
-  )
-}
+    <>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      <ProductList list={pasteleria} loading={loading} />
+    </>
+  );
+};

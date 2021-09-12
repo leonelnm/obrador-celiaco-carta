@@ -1,28 +1,18 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useGlobalProduct } from "hooks/useGlobalProduct";
-import Product from "components/productCard/Product";
-import Loading from "components/loader/Loading";
+import { ProductList } from "components/productList/ProductList";
+import { CATEGORIES_INFO } from "utils/categoriesList";
 
 export const Panaderia = () => {
+  const { title } = CATEGORIES_INFO.panaderia;
   const { panaderia, loading } = useGlobalProduct();
-
   return (
-    <section>
-      {loading ? (
-        <Loading />
-      ) : (
-        panaderia.map((p) => {
-          return (
-            <Product
-              key={p.id}
-              imgUrl={p.url}
-              name={p.name}
-              price={p.price}
-              content={p.content}
-            />
-          );
-        })
-      )}
-    </section>
+    <>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      <ProductList list={panaderia} loading={loading} />
+    </>
   );
 };

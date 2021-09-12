@@ -1,4 +1,4 @@
-import { Navbar } from "components/navbar/Navbar";
+import Navbar from "components/navbar/Navbar";
 import { Router } from "components/router/Router";
 import { ProductsContextProvider } from "context/ProductsContext";
 

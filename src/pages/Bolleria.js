@@ -1,28 +1,22 @@
-import Loading from 'components/loader/Loading';
-import Product from 'components/productCard/Product';
-import { useGlobalProduct } from 'hooks/useGlobalProduct';
-import React from 'react'
+import React from "react";
+import { Helmet } from "react-helmet";
+import { ProductList } from "components/productList/ProductList";
+import { useGlobalProduct } from "hooks/useGlobalProduct";
+import { CATEGORIES_INFO } from "utils/categoriesList";
 
-export const Bolleria = ({filter}) => {
-    const { bolleria, loading } = useGlobalProduct();
+function Bolleria() {
+  const { title, description } = CATEGORIES_INFO.bolleria;
 
+  const { bolleria, loading } = useGlobalProduct();
   return (
-    <section>
-      {loading ? (
-        <Loading />
-      ) : (
-        bolleria.map((p) => {
-          return (
-            <Product
-              key={p.id}
-              imgUrl={p.url}
-              name={p.name}
-              price={p.price}
-              content={p.content}
-            />
-          );
-        })
-      )}
-    </section>
-  )
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description}/>
+      </Helmet>
+      <ProductList list={bolleria} loading={loading} />
+    </>
+  );
 }
+
+export default Bolleria;

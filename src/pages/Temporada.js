@@ -1,29 +1,18 @@
-import Loading from 'components/loader/Loading';
-import Product from 'components/productCard/Product';
-import { useGlobalProduct } from 'hooks/useGlobalProduct';
-import React from 'react'
+import React from "react";
+import { Helmet } from "react-helmet";
+import { ProductList } from "components/productList/ProductList";
+import { useGlobalProduct } from "hooks/useGlobalProduct";
+import { CATEGORIES_INFO } from "utils/categoriesList";
 
-export const Temporada = ({filter}) => {
-    const { temporada, loading } = useGlobalProduct();
-
+export const Temporada = () => {
+  const { title } = CATEGORIES_INFO.temporada;
+  const { temporada, loading } = useGlobalProduct();
   return (
-    <section>
-      {loading ? (
-        <Loading />
-      ) : (
-        temporada.map((p) => {
-          return (
-            <Product
-              key={p.id}
-              imgUrl={p.url}
-              name={p.name}
-              price={p.price}
-              content={p.content}
-              categories={p.categories}
-            />
-          );
-        })
-      )}
-    </section>
-  )
-}
+    <>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      <ProductList list={temporada} loading={loading} />
+    </>
+  );
+};
