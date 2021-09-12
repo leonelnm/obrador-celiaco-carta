@@ -14,7 +14,7 @@ function App() {
         </main>
       </ProductsContextProvider>
       <footer style={{marginTop: '5rem'}}>
-        <p style={{textAlign:'center'}}>En Construccion</p>
+        <p style={{textAlign:'center'}}>En Desarrollo</p>
       </footer>
     </>
   );
