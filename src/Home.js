@@ -1,4 +1,4 @@
-import Navbar from "components/navbar/Navbar";
+import { Header } from "components/header/Header";
 import { Router } from "components/router/Router";
 import { ProductsContextProvider } from "context/ProductsContext";
 
@@ -8,11 +8,14 @@ function App() {
   return (
     <>
       <ProductsContextProvider>
-        <Navbar />
+        <Header/>
         <main className={styles.productGrid}>
           <Router />
         </main>
       </ProductsContextProvider>
+      <footer style={{marginTop: '5rem'}}>
+        <p style={{textAlign:'center'}}>En Construccion</p>
+      </footer>
     </>
   );
 }

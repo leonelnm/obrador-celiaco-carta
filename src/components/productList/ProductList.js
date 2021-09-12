@@ -3,7 +3,6 @@ import Loading from "components/loader/Loading";
 import Product from "components/productCard/Product";
 
 export const ProductList = ({ list, loading }) => {
-    console.log("render");
   return (
     <section>
       {loading ? (

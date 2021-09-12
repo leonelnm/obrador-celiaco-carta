@@ -9,7 +9,7 @@ export const useProducts = () => {
   useEffect(() => {
     fetchProducts().then((response) => {
 
-      console.log(JSON.stringify(response));
+      // console.log(JSON.stringify(response));
 
       getProductsFiltered(response).then(allProducts => {
         setProducts(allProducts)
@@ -29,11 +29,15 @@ const getProductsFiltered = async (products) => {
   const temporada = products.filter( p => filterByFilter(p.categories, CATEGORIES_FILTER.TEMPORADA))
 
   return {
-    panaderia,
-    bolleria,
-    pasteleria,
-    temporada
+    panaderia : orderByName(panaderia),
+    bolleria : orderByName(bolleria),
+    pasteleria : orderByName(pasteleria),
+    temporada : orderByName(temporada)
   }
+}
+
+const orderByName = (list)=>{
+  return list.sort((a, b) => a.name.localeCompare(b.name));
 }
 
 const filterByFilter = (categories, filterList) => {

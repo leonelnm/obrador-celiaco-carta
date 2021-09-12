@@ -1,11 +1,12 @@
 .navbar {
   display: flex;
   flex-flow: row nowrap;
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
   overflow: scroll;
   overflow-y: hidden;
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .navbar::-webkit-scrollbar {
@@ -21,4 +22,23 @@
 
 .navbar a {
     padding: .5rem;
+    border-right: 2px solid #d1ba74;
+    white-space: nowrap;
+    padding: 1.125rem .75rem;
+    font-weight: bolder;
+}
+
+.navbar a:last-child{
+  border: none;
+}
+
+.activeLink,
+.navbar a:hover {
+  background-color: #d1ba74;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
