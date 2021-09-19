@@ -1,18 +1,18 @@
 .product {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 3px 0px;
   margin-right: 0.5rem;
-gap: .25rem    ;
+  gap: 0.5rem;
   -webkit-border-bottom-right-radius: 20px;
   -moz-border-radius-bottomright: 20px;
   border-bottom-right-radius: 20px;
 }
 
-.productImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.productImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .info {
@@ -29,9 +29,15 @@ gap: .25rem    ;
 
 .price {
   font-weight: 0.9em;
+  text-align: right;
 }
 
 .content {
   font-weight: 300;
-  font-size: .8em;
+  font-size: 0.8em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
 }

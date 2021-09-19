@@ -7,6 +7,9 @@ import { CATEGORIES_INFO } from "utils/categoriesList";
 export const Pasteleria = () => {
   const { title } = CATEGORIES_INFO.pasteleria;
   const { pasteleria, loading } = useGlobalProduct();
+
+  window.scrollTo(0, 0 );
+  
   return (
     <>
       <Helmet>

@@ -1,7 +1,15 @@
-.box{
-    background-color: #f9dd89;   
+.box {
+  background-color: #f9dd89;
+  display: flex;
+  justify-content: center;
 }
 
-.logo{
-    width: 100%;
+.logo {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 25%;
+  }
 }

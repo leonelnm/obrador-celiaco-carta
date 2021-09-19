@@ -7,6 +7,11 @@
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #f9dd89;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .navbar::-webkit-scrollbar {

@@ -1,0 +1,30 @@
+.footer{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    margin-top: 1rem;
+    gap: .5rem;
+    background-color: #f9dd89;
+    padding: .8rem;
+    font-size: .8em;
+}
+
+.partner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-weight: bold;
+    text-align: center;
+}
+
+.partner img{
+    margin-top: .5rem;
+    max-width: 100%;
+}
+
+.contact div{
+    margin-top: .5rem;
+}

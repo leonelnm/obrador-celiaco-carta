@@ -7,6 +7,9 @@ import { CATEGORIES_INFO } from "utils/categoriesList";
 export const Panaderia = () => {
   const { title } = CATEGORIES_INFO.panaderia;
   const { panaderia, loading } = useGlobalProduct();
+
+  window.scrollTo(0, 0 );
+
   return (
     <>
       <Helmet>

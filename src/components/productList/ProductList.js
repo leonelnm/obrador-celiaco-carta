@@ -1,12 +1,17 @@
 import React from "react";
-import Loading from "components/loader/Loading";
 import Product from "components/productCard/Product";
+import { ProductCardSkeleton } from "components/productCardSkeleton/ProductCardSkeleton";
+
+import styles from "./ProductList.module.css"
 
 export const ProductList = ({ list, loading }) => {
+
+  const load = Array.from(Array(10).keys())
+
   return (
-    <section>
+    <section className={styles.grid}>
       {loading ? (
-        <Loading />
+        load.map(l => <ProductCardSkeleton key={l}/>)
       ) : (
         list.map((p) => {
           return (

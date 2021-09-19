@@ -6,8 +6,10 @@ import { CATEGORIES_INFO } from "utils/categoriesList";
 
 function Bolleria() {
   const { title, description } = CATEGORIES_INFO.bolleria;
-
   const { bolleria, loading } = useGlobalProduct();
+
+  window.scrollTo(0, 0 );
+
   return (
     <>
       <Helmet>

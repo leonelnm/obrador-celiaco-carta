@@ -7,6 +7,9 @@ import { CATEGORIES_INFO } from "utils/categoriesList";
 export const Temporada = () => {
   const { title } = CATEGORIES_INFO.temporada;
   const { temporada, loading } = useGlobalProduct();
+
+  window.scrollTo(0, 0 );
+  
   return (
     <>
       <Helmet>

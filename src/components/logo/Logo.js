@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo.jpeg'
+import logo from './logo.webp'
 import style from './Logo.module.css'
 
 export const Logo = () => {

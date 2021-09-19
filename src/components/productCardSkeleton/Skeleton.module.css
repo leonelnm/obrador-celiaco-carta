@@ -1,0 +1,77 @@
+.product {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 3px 0px;
+  margin-right: 0.5rem;
+  gap: 0.5rem;
+  -webkit-border-bottom-right-radius: 20px;
+  -moz-border-radius-bottomright: 20px;
+  border-bottom-right-radius: 20px;
+  height: 80px;
+}
+
+@keyframes loading {
+  to {
+    background-position: 100% 0, /* move highlight to right */ 0 0;
+  }
+}
+
+.info {
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.image {
+  background-color: #eee;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    #eee;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+  animation: loading 1s infinite;
+}
+
+.content {
+  content: "";
+  padding: 1rem 0;
+  background-color: #eee;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    #eee;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+  animation: loading 2s infinite;
+}
+
+.title {
+  content: "";
+  font-size: 1.125em;
+  background-color: #eee;
+  padding: 0.5rem 0;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    #eee;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+  animation: loading 2s infinite;
+}

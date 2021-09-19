@@ -1,21 +1,20 @@
+import { Footer } from "components/footer/Footer";
 import { Header } from "components/header/Header";
+import Navbar from "components/navbar/Navbar";
 import { Router } from "components/router/Router";
 import { ProductsContextProvider } from "context/ProductsContext";
-
-import styles from "./styles/Home.module.css"
 
 function App() {
   return (
     <>
       <ProductsContextProvider>
         <Header/>
-        <main className={styles.productGrid}>
+        <Navbar/>
+        <main>
           <Router />
         </main>
       </ProductsContextProvider>
-      <footer style={{marginTop: '5rem'}}>
-        <p style={{textAlign:'center'}}>En Desarrollo</p>
-      </footer>
+      <Footer/>
     </>
   );
 }
